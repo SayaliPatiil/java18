@@ -79,6 +79,10 @@ public class TraverserRewrite {
   abstract class TreeTraverserBreadthFirst<N> {
     @Placeholder
     abstract Iterable<N> getChildren(N node);
+    @Placeholder
+    abstract Iterable<N> getChildren(N node);
+    @Placeholder
+    abstract Iterable<N> getChildren(N node);
 
     @BeforeTemplate
     Iterable<N> before1(N root) {
