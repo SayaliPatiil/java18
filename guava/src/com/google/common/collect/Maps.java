@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.google.common.collect;
+
 
 import static com.google.common.base.Preconditions.checkArgument;
 import static com.google.common.base.Preconditions.checkNotNull;
@@ -312,10 +312,7 @@ public final class Maps {
    *
    * @return a new, empty {@code LinkedHashMap}
    */
-  public static <K extends @Nullable Object, V extends @Nullable Object>
-      LinkedHashMap<K, V> newLinkedHashMap() {
-    return new LinkedHashMap<>();
-  }
+  
 
   /**
    * Creates a <i>mutable</i>, insertion-ordered {@code LinkedHashMap} instance with the same
@@ -549,7 +546,7 @@ public final class Maps {
     Preconditions.checkNotNull(valueEquivalence);
 
     Map<K, V> onlyOnLeft = newLinkedHashMap();
-    Map<K, V> onlyOnRight = new LinkedHashMap<>(right); // will whittle it down
+    
     Map<K, V> onBoth = newLinkedHashMap();
     Map<K, MapDifference.ValueDifference<V>> differences = newLinkedHashMap();
     doDifference(left, right, valueEquivalence, onlyOnLeft, onlyOnRight, onBoth, differences);
