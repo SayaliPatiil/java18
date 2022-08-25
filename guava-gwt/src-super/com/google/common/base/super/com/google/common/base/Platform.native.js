@@ -3,9 +3,7 @@
  * @return {boolean} Whether the given string is null or is the empty string.
  * @public
  */
-Platform.stringIsNullOrEmpty = function(str) {
-  return !str;
-};
+
 
 
 /**
